@@ -19,12 +19,6 @@ const userSchema = new Schema({
     required: 'Display Name is required'
   },
 	password: String,
-	favourites: [{
-		id: String, 
-		likes: String, 
-		title: String, 
-		image: String,
-	}]
 });
 
 // On Save Hook, encrypt password
