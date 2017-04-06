@@ -12,6 +12,12 @@ const userSchema = new Schema({
 		unique: true,
 		lowercase: true
 	},
+	displayName: {
+    type: String,
+    default: '',
+    trim: true,
+    required: 'Display Name is required'
+  },
 	password: String,
 	favourites: [{
 		id: String, 
