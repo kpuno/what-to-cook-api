@@ -13,5 +13,5 @@ module.exports = function (app) {
 	});
 	app.post('/signin', requireSignin, Authentication.signin);
 	app.post('/signup', Authentication.signup);
-	app.post('/getdisplayname', Authentication.getDisplayName);
+	app.post('/getuserinfo', Authentication.getUserInfo);
 }
