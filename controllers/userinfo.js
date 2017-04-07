@@ -13,7 +13,7 @@ exports.editUserInfo = function (req, res, next) {
 	const displayName = req.body.displayName;
 	const currentEmail = req.body.currentEmail;
 	User.findOneAndUpdate(
-		{ email: email },
+		{ email: currentEmail },
 		{ $set: { email: email, displayName: displayName } },
 		{ upsert: true }
 		, function (err, results) {
