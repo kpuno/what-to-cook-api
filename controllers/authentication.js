@@ -48,12 +48,3 @@ exports.signup = function (req, res, next) {
 		});
 	});
 }
-
-exports.getUserInfo = function (req, res, next) {
-	const email = req.body.email
-		User.findOne({ email: email }, function (err, results) {
-			if (err) { return next(err); }
-			console.log(results);
-			res.json(results);
-		});
-}
