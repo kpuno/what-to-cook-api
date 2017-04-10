@@ -49,7 +49,7 @@ exports.findUserSurveys = function (req, res, next) {
 
 exports.searchSurveys = function (req, res, next) {
 	const title = req.body.title;
-	Survey.find({ title: {$regex: /title/, $options: 'i'} }, function (err, surveys) {
+	Survey.find({ title: title}, function (err, surveys) {
 		if (err) { return next(err); }
 		res.json(surveys);
 	})
