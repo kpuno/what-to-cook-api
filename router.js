@@ -30,6 +30,6 @@ module.exports = function (app) {
 
 	app.get('/getallsurveys', Survey.findAllSurveys);
 	app.post('/getusersurveys', Survey.findUserSurveys);
-	app.post('/searchsurveys', Survey.findAllSurveys);
+	app.post('/searchsurveys', Survey.searchSurveys);
 
 }

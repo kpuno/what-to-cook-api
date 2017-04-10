@@ -6,10 +6,6 @@ exports.addSurvey = function (req, res, next) {
 	const survey = req.body.survey;
 	const email = req.body.email;
 
-	console.log(title);
-	console.log(survey);
-	console.log(email);
-
 	const newSurvey = new Survey({
 		title: title,
 		survey: survey,
@@ -53,7 +49,7 @@ exports.findUserSurveys = function (req, res, next) {
 
 exports.searchSurveys = function (req, res, next) {
 	const title = req.body.title;
-	Survey.find({ title: /.*title.*/ }, function (err, surveys) {
+	Survey.find({ title: {$regex: /title/, $options: 'i'} }, function (err, surveys) {
 		if (err) { return next(err); }
 		res.json(surveys);
 	})
