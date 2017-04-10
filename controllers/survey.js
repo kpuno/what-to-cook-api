@@ -47,7 +47,7 @@ exports.findUserSurveys = function (req, res, next) {
 	const email = req.body.email;
 	Survey.find({ email: email }, function (err, surveys) {
 		if (err) { return next(err); }
-		res.json({surveys});
+		res.json(surveys);
 	})
 }
 
