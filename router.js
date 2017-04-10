@@ -29,7 +29,7 @@ module.exports = function (app) {
 	app.post('/changesurveyemail', Survey.changeSurveyEmail);
 
 	app.get('/getallsurveys', Survey.findAllSurveys);
-	app.get('/getusersurveys', Survey.findUserSurveys);
-	app.get('/searchsurveys', Surve.findAllSurveys);
+	app.post('/getusersurveys', Survey.findUserSurveys);
+	app.post('/searchsurveys', Survey.findAllSurveys);
 
 }
