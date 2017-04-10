@@ -26,4 +26,10 @@ module.exports = function (app) {
 
 	// survey
 	app.post('/addsurvey', Survey.addSurvey);
+	app.post('/changesurveyemail', Survey.changeSurveyEmail);
+
+	app.get('/getallsurveys', Survey.findAllSurveys);
+	app.get('/getusersurveys', Survey.findUserSurveys);
+	app.get('/searchsurveys', Surve.findAllSurveys);
+
 }
