@@ -50,7 +50,8 @@ exports.findUserSurveys = function (req, res, next) {
 
 exports.searchSurveys = function (req, res, next) {
 	const title = req.body.title;
-	Survey.find({ title: title }, function (err, surveys) {
+	const email = req.body.email;
+	Survey.find({ title: title, email: email }, function (err, surveys) {
 		if (err) { return next(err); }
 		res.json(surveys);
 	})
