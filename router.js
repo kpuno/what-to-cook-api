@@ -35,5 +35,5 @@ module.exports = function (app) {
 
 	// results
 	app.post('/addresults', Results.addResults);
-
+	app.post('/searchresults', Results.searchResults);
 }
