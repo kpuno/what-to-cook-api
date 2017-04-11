@@ -32,8 +32,9 @@ exports.changeSurveyEmail = function (req, res, next) {
 		})
 }
 
-exports.findAllSurveys = function (req, res, next) {
-	Survey.find({}, function (err, surveys) {
+exports.searchAllSurveys = function (req, res, next) {
+	const title = req.body.title;
+	Survey.find({ title: new RegExp(title, "i") }, function (err, surveys) {
 		if (err) { return next(err); }
 		res.json(surveys);
 	})
@@ -49,7 +50,7 @@ exports.findUserSurveys = function (req, res, next) {
 
 exports.searchSurveys = function (req, res, next) {
 	const title = req.body.title;
-	Survey.find({ title: title}, function (err, surveys) {
+	Survey.find({ title: title }, function (err, surveys) {
 		if (err) { return next(err); }
 		res.json(surveys);
 	})

@@ -29,11 +29,11 @@ module.exports = function (app) {
 	app.post('/addsurvey', Survey.addSurvey);
 	app.post('/changesurveyemail', Survey.changeSurveyEmail);
 
-	app.get('/getallsurveys', Survey.findAllSurveys);
+	app.post('/getallsurveys', Survey.searchAllSurveys);
 	app.post('/getusersurveys', Survey.findUserSurveys);
 	app.post('/searchsurveys', Survey.searchSurveys);
 
 	// results
-	app.post('/addresults', Results.addResults);
+	app.post('/	', Results.addResults);
 
 }
