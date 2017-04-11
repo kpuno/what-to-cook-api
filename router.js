@@ -34,6 +34,6 @@ module.exports = function (app) {
 	app.post('/searchsurveys', Survey.searchSurveys);
 
 	// results
-	app.post('/	', Results.addResults);
+	app.post('/addresults', Results.addResults);
 
 }
