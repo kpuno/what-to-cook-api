@@ -3,20 +3,16 @@ const Schema = mongoose.Schema;
 
 const surveySchema = new Schema({
 	title: {
-		type: String,
-		required: true
+		type: String
 	},
 	survey: {
-		type: Object,
-		required: true
+		type: Object
 	},
 	email: {
-		type: String,
-		required: true
+		type: String
 	},
 	exipryDate: {
-    type: Date,
-		required: true
+    type: Date
   }
 })
 
