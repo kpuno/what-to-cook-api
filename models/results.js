@@ -3,13 +3,16 @@ const Schema = mongoose.Schema;
 
 const resultsSchema = new Schema({
 	title: {
-		type: String
+		type: String,
+		required: true
 	},
 	results: {
-		type: Object
+		type: Object,
+		required: true
 	},
 	email: {
-		type: String
+		type: String,
+		required: true
 	}
 })
 

@@ -3,14 +3,21 @@ const Schema = mongoose.Schema;
 
 const surveySchema = new Schema({
 	title: {
-		type: String
+		type: String,
+		required: true
 	},
 	survey: {
-		type: Object
+		type: Object,
+		required: true
 	},
 	email: {
-		type: String
-	}
+		type: String,
+		required: true
+	},
+	exipryDate: {
+    type: Date,
+		required: true
+  }
 })
 
 // Create the model class

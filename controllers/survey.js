@@ -5,11 +5,13 @@ exports.addSurvey = function (req, res, next) {
 	const title = req.body.title;
 	const survey = req.body.survey;
 	const email = req.body.email;
+	const date = req.body.date;
 
 	const newSurvey = new Survey({
 		title: title,
 		survey: survey,
-		email: email
+		email: email,
+		exipryDate: date
 	});
 
 	newSurvey.save(function (err) {

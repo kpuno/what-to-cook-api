@@ -10,15 +10,17 @@ const userSchema = new Schema({
 	email: {
 		type: String,
 		unique: true,
-		lowercase: true
+		lowercase: true,
+		required: true
 	},
 	displayName: {
     type: String,
     default: '',
     trim: true,
-    required: 'Display Name is required'
+    required: true
   },
 	password: String,
+	required: true
 });
 
 // On Save Hook, encrypt password
