@@ -11,7 +11,7 @@ const surveySchema = new Schema({
 	email: {
 		type: String
 	},
-	exipryDate: {
+	expiryDate: {
     type: String
   }
 })

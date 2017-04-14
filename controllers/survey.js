@@ -11,7 +11,7 @@ exports.addSurvey = function (req, res, next) {
 		title: title,
 		survey: survey,
 		email: email,
-		exipryDate: date
+		expiryDate: date
 	});
 
 	newSurvey.save(function (err) {
