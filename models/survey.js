@@ -12,7 +12,7 @@ const surveySchema = new Schema({
 		type: String
 	},
 	exipryDate: {
-    type: Date
+    type: String
   }
 })
 
