@@ -32,6 +32,7 @@ module.exports = function (app) {
 	app.post('/getallsurveys', Survey.searchAllSurveys);
 	app.post('/getusersurveys', Survey.findUserSurveys);
 	app.post('/searchsurveys', Survey.searchSurveys);
+	app.post('/deletesurvey', Survey.removeSurvey);
 
 	// results
 	app.post('/addresults', Results.addResults);

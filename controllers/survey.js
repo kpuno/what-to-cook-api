@@ -58,3 +58,12 @@ exports.searchSurveys = function (req, res, next) {
 		res.json(surveys);
 	})
 }
+
+exports.removeSurvey = function (req, res, next) {
+	const title = req.body.title;
+	const email = req.body.email;
+	Survey.remove({ title: title, email: email }, function (err, surveys) {
+		if (err) { return next(err); }
+		res.json(surveys);
+	})
+}
