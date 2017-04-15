@@ -33,6 +33,7 @@ module.exports = function (app) {
 	app.post('/getusersurveys', Survey.findUserSurveys);
 	app.post('/searchsurveys', Survey.searchSurveys);
 	app.post('/deletesurvey', Survey.removeSurvey);
+	app.post('/editexiprydate', Survey.editExipryDate);
 
 	// results
 	app.post('/addresults', Results.addResults);

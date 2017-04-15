@@ -67,3 +67,17 @@ exports.removeSurvey = function (req, res, next) {
 		res.json(surveys);
 	})
 }
+
+exports.editExipryDate = function (req, res, next) {
+	const email = req.body.email;
+	const title = req.body.title;
+	const expiryDate = req.body.expiryDate;
+	Survey.findOneAndUpdate(
+		{ email: email, title: title },
+		{ $set: { expiryDate: expiryDate } },
+		{ upsert: true }
+		, function (err, results) {
+			if (err) { return next(err); }
+			res.json(results);
+		})
+}
