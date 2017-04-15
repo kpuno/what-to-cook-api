@@ -24,7 +24,6 @@ module.exports = function (app) {
 	app.post('/getuserinfo', UserInfo.getUserInfo);
 	app.post('/edituserinfo', UserInfo.editUserInfo);
 	app.post('/changepassword', UserInfo.changePassword);
-
 	// survey
 	app.post('/addsurvey', Survey.addSurvey);
 	app.post('/changesurveyemail', Survey.changeSurveyEmail);
