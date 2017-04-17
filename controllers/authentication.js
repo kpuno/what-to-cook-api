@@ -32,7 +32,7 @@ exports.signup = function (req, res, next) {
 		if (existingUser) {
 			return res.status(422).send({ error: 'Email is in use' });
 		}
-
+		
 		// If a user with email does NOT exist, create and save user record
 		const user = new User({
 			email: email,

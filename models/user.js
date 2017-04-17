@@ -12,12 +12,14 @@ const userSchema = new Schema({
 		unique: true,
 		lowercase: true
 	},
-	displayName: {
-    type: String,
-    default: '',
-    trim: true
-  },
-	password: String
+	password: String,
+	type: String,
+	favourites: [{
+		id: String, 
+		likes: String, 
+		title: String, 
+		image: String,
+	}]
 });
 
 // On Save Hook, encrypt password
