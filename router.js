@@ -11,30 +11,13 @@ const requireSignin = passport.authenticate('local', { session: false });
 // add authorization to favourite routes?
 
 module.exports = function (app) {
-	// initial
 	app.get('/', requireAuth, function(req, res) {
 		res.send({ message: 'Super secret code is ABC123' });
 	});
-
-	// auth
 	app.post('/signin', requireSignin, Authentication.signin);
 	app.post('/signup', Authentication.signup);
 
-	// user
-	app.post('/getuserinfo', UserInfo.getUserInfo);
-	app.post('/edituserinfo', UserInfo.editUserInfo);
-	app.post('/changepassword', UserInfo.changePassword);
-	// survey
-	app.post('/addsurvey', Survey.addSurvey);
-	app.post('/changesurveyemail', Survey.changeSurveyEmail);
-
-	app.post('/getallsurveys', Survey.searchAllSurveys);
-	app.post('/getusersurveys', Survey.findUserSurveys);
-	app.post('/searchsurveys', Survey.searchSurveys);
-	app.post('/deletesurvey', Survey.removeSurvey);
-	app.post('/editexiprydate', Survey.editExipryDate);
-
-	// results
-	app.post('/addresults', Results.addResults);
-	app.post('/searchresults', Results.searchResults);
+	app.post('/addfavourites', Favourites.addFavourite);
+	app.post('/removefavourites', Favourites.removeFavourites);
+	app.post('/getfavourites', Favourites.getFavourites);
 }
