@@ -10,7 +10,7 @@ const cors = require('cors');
 const favicon = require('serve-favicon');
 
 // DB Setup
-mongoose.connect(process.env.URI || 'mongodb://user:12345@ds153730.mlab.com:53730/survey-app');
+mongoose.connect(process.env.URI || 'mongodb://user:12345@ds141950.mlab.com:41950/what-to-cook');
 
 // favicon
 app.use(favicon(__dirname + '/favicon.ico'));

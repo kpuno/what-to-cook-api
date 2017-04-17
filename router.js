@@ -2,8 +2,7 @@ const Authentication = require('./controllers/authentication');
 const UserInfo = require('./controllers/userinfo');
 const passportService = require('./services/passport');
 const passport = require('passport');
-const Survey = require('./controllers/survey');
-const Results = require('./controllers/results');
+const Favourites = require('./controllers/favourites');
 
 const requireAuth = passport.authenticate('jwt', { session: false });
 const requireSignin = passport.authenticate('local', { session: false });
