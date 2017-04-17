@@ -37,7 +37,8 @@ exports.signup = function (req, res, next) {
 		const user = new User({
 			email: email,
 			password: password,
-			type: type
+			type: type,
+			favourites: []
 		});
 
 		user.save(function (err) {
