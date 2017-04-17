@@ -3,6 +3,7 @@ const UserInfo = require('./controllers/userinfo');
 const passportService = require('./services/passport');
 const passport = require('passport');
 const Favourites = require('./controllers/favourites');
+const Users = require('./userinfo.js');
 
 const requireAuth = passport.authenticate('jwt', { session: false });
 const requireSignin = passport.authenticate('local', { session: false });
@@ -19,4 +20,6 @@ module.exports = function (app) {
 	app.post('/addfavourites', Favourites.addFavourite);
 	app.post('/removefavourites', Favourites.removeFavourites);
 	app.post('/getfavourites', Favourites.getFavourites);
+
+	app.post('/getuserinfo', Users.getUserInfo);
 }
